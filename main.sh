@@ -2,11 +2,13 @@
 declare -i char_ascii
 declare -i char_weight
 declare -i total
+declare -i num
 declare -A ch
+let num=0
 LC_CTYPE=C 
-for a in {a..z}
+for alphabet in {a..z}
 do
-	ch[${a}]=$((++z))
+	ch[${alphabet}]=$((++num))
 done
 
 for i in `cat all_word.txt`
