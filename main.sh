@@ -16,11 +16,11 @@ do
 	for j in `echo "$i" | fold -w 1`
 	do
 		total=$((${total}+${ch[${j}]}))
-		if [ ${total} -gt "100" ]; then
+		if [ ${total} -gt 100 ]; then
 			break
 		fi
 	done
-	if [ ${total} -eq "100" ]; then
+	if [ ${total} -eq 100 ]; then
 		echo "${i} is ${total}"
 	fi
 	total=0
